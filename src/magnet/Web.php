@@ -21,7 +21,12 @@ class Web {
     }
     
     public function liburuak() {
-	$liburuak = $this->liburuBiltegia->lortuLiburuak();
-	echo $this->txanMotorra->errendatu('liburuak', ['liburuak' => $liburuak]);
+	try {
+	    $liburuak = $this->liburuBiltegia->lortuLiburuak();
+	    echo $this->txanMotorra->errendatu('liburuak', ['liburuak' => $liburuak]);
+	} catch (\Exception $e) {
+	    var_dump($e);
+	    echo 'Errorea liburuak eskuratzean.';
+	}
     }
 }
