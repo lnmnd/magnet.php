@@ -23,8 +23,10 @@ class Web {
     public function index() {
 	try {
 	    $liburuak = $this->liburuBiltegia->lortuLiburuak();
+	    $egileak = $this->liburuBiltegia->lortuEgileak();
 	    $erabiltzaileak = $this->liburuBiltegia->lortuErabiltzaileak();
 	    echo $this->txanMotorra->errendatu('index', ['liburuak' => $liburuak,
+							 'egileak' => $egileak,
 							 'erabiltzaileak' => $erabiltzaileak]);
 	} catch (\Exception $e) {
 	    echo 'Errorea.';
