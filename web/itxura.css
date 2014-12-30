@@ -2,9 +2,19 @@ body {
     max-width: 33em;
     margin: 0 auto;
     line-height: 1.33em;
+    background: #fff;
+    color: #333;
 }
 
 p {
     margin: 1.5em 0;
     text-align:justify;
-}      
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li:nth-child(even) {
+    background: #ffdead;
+}
