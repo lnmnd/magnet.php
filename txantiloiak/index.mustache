@@ -6,21 +6,22 @@
     <link rel="stylesheet" href="/itxura.css" />
   </head>
   <body>
-    <h1>Liburuak</h1>
+    <h1>Magnet loturak</h1>
+    <h2>Liburuak</h2>
     <ul>
       {{#liburuak}}
         <li><a href="{{magnet}}"><img src="/magnet.gif" alt="imana" /></a> {{titulua}}</li>
       {{/liburuak}}
     </ul>
 
-    <h1>Egileak</h1>
+    <h2>Egileak</h2>
     <ul>
       {{#egileak}}
         <li>{{.}}</li>
       {{/egileak}}
     </ul>
     
-    <h1>Erabiltzaileak</h1>
+    <h2>Erabiltzaileak</h2>
     <ul>
       {{#erabiltzaileak}}
         <li>{{izena}} ({{erabiltzailea}})</li>
