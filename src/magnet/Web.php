@@ -16,14 +16,16 @@ class Web {
     
     public function hasi() {
 	$klein = new Klein();
-	$klein->respond('GET', '/', [$this, 'liburuak']);
+	$klein->respond('GET', '/', [$this, 'index']);
 	$klein->dispatch();
     }
     
-    public function liburuak() {
+    public function index() {
 	try {
 	    $liburuak = $this->liburuBiltegia->lortuLiburuak();
-	    echo $this->txanMotorra->errendatu('liburuak', ['liburuak' => $liburuak]);
+	    $erabiltzaileak = $this->liburuBiltegia->lortuErabiltzaileak();
+	    echo $this->txanMotorra->errendatu('liburuak', ['liburuak' => $liburuak,
+							    'erabiltzaileak' => $erabiltzaileak]);
 	} catch (\Exception $e) {
 	    var_dump($e);
 	    echo 'Errorea liburuak eskuratzean.';

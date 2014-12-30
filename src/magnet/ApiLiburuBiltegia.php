@@ -16,4 +16,10 @@ class ApiLiburuBiltegia implements LiburuBiltegia {
 	$era = $bez->get($this->oinarriUrl.'liburuak?muga=0');
 	return $era->json()['liburuak'];
     }
+
+    public function lortuErabiltzaileak() {
+	$bez = new Client();
+	$era = $bez->get($this->oinarriUrl.'erabiltzaileak?muga=0');
+	return $era->json()['erabiltzaileak'];
+    }
 }
