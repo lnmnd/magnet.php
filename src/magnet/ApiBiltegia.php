@@ -4,7 +4,7 @@ namespace magnet;
 
 use GuzzleHttp\Client;
 
-class ApiLiburuBiltegia implements LiburuBiltegia {
+class ApiBiltegia implements Biltegia {
     private $oinarriUrl;
     
     public function __construct($oinarriUrl) {

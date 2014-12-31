@@ -5,12 +5,12 @@ namespace magnet;
 use Klein\Klein;
 
 class Web {
-    private $liburuBiltegia;
+    private $biltegia;
     private $txanMotorra;
     private $menua;
     
-    public function __construct(LiburuBiltegia $liburuBiltegia, TxanMotorra $txanMotorra) {
-	$this->liburuBiltegia = $liburuBiltegia;
+    public function __construct(Biltegia $biltegia, TxanMotorra $txanMotorra) {
+	$this->biltegia = $biltegia;
 	$this->txanMotorra = $txanMotorra;
     }
     
@@ -22,9 +22,9 @@ class Web {
     
     public function index() {
 	try {
-	    $liburuak = $this->liburuBiltegia->lortuLiburuak();
-	    $egileak = $this->liburuBiltegia->lortuEgileak();
-	    $erabiltzaileak = $this->liburuBiltegia->lortuErabiltzaileak();
+	    $liburuak = $this->biltegia->lortuLiburuak();
+	    $egileak = $this->biltegia->lortuEgileak();
+	    $erabiltzaileak = $this->biltegia->lortuErabiltzaileak();
 	    echo $this->txanMotorra->errendatu('index', ['liburuak' => $liburuak,
 							 'egileak' => $egileak,
 							 'erabiltzaileak' => $erabiltzaileak]);

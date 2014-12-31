@@ -8,7 +8,7 @@ if (file_exists(__DIR__.'/.env')) {
 $c = new Pimple\Container();
 
 $c['liburuBiltegia'] = function ($c) {
-    return new magnet\ApiLiburuBiltegia(getenv('API_URL'));
+    return new magnet\ApiBiltegia(getenv('API_URL'));
 };
 
 $c['mustache.txantiloiak'] = __DIR__.'/txantiloiak';
