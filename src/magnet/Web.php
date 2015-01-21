@@ -7,7 +7,6 @@ use Klein\Klein;
 class Web {
     private $biltegia;
     private $txanMotorra;
-    private $menua;
     
     public function __construct(Biltegia $biltegia, TxanMotorra $txanMotorra) {
 	$this->biltegia = $biltegia;
